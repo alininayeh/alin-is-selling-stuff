@@ -28,15 +28,6 @@ body {
       text-decoration: none;
       text-transform: uppercase;
     }
-
-    .Header-shoppingCart {
-      align-items: center;
-      border-left: 1px solid #E0E0E0;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      width: 58px;
-    }
   }
 
   .Loader {
@@ -202,14 +193,13 @@ body {
             line-height: 25px;
           }
 
-          .ProductDetails-button {
-            background: #f44336;
-            border: 0;
-            color: #fff;
-            display: block;
-            font-size: 14px;
-            padding: 20px;
-            width: 100%;
+          .ProductDetails-get {
+            color: #f44336;
+
+            a {
+              color: #f44336;
+              font-weight: bold;
+            }
           }
         }
       }

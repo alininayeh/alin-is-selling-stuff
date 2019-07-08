@@ -19,8 +19,9 @@ const ProductDetails = ({products, match}) => {
                         </div>
                         <div className='ProductDetails-productInfo'>
                             <h1 className='ProductDetails-title'>{product.name}</h1>
+                            <span className='ProductDetails-price'>{product.price} &euro;</span>
                             <p dangerouslySetInnerHTML={{__html: product.description.replace(/\n/g, '<br />')}} />
-                            <button className='ProductDetails-button'>Get it for {product.price} &euro;</button>
+                            <p className='ProductDetails-get'>In order to get this just send me an email to <a href='mailto:alinoch7@gmail.com'>alinoch7@gmail.com</a> or find me on Slack (<strong>Alin Inayeh</strong>).</p>
                         </div>
                     </div>
                 </div>
