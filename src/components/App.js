@@ -18,17 +18,35 @@ const getProductsAction = () => {
 };
 
 class App extends React.Component {
+    state = {productOpen: false};
+
+    isProductOpen = () => {
+        return window.location.hash.indexOf('/product/') > -1
+    };
+
+    checkProductPage = () => {
+        this.setState({productOpen: this.isProductOpen()});
+    }
+
     componentDidMount() {
         this.props.getProducts();
+        this.checkProductPage();
+        window.addEventListener('hashchange', this.checkProductPage);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('hashchange', this.checkProductPage);
     }
     
     render() {
+        const {products} = this.props;
+        
         return (
             <Router>
-                <div className='App'>
+                <div className={`App ${this.state.productOpen && 'productOpen'}`}>
                     <Header />
-                    <Route path='/' exact render={(props) => <Products {...props} products={this.props.products} />} />
-                    <Route path='/product/:id/:name' render={(props) => <ProductDetails {...props} products={this.props.products} />} />
+                    <Route path='/product/:id/:name' render={(props) => <ProductDetails {...props} products={products} />} />
+                    <Products products={products} />
                 </div>
             </Router>
         );
