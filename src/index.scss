@@ -141,16 +141,16 @@ body {
     .ProductDetails-placeholder {
       align-items: flex-start;
       background: #fff;
-      bottom: 0;
       display: flex;
       padding: 20px;
-      position: absolute;
-      top: 60px;
-      z-index: 3;
       width: 100%;
 
       @media (min-width: 720px) {
         background: rgba(0, 0, 0, 0.5);
+        bottom: 0;
+        position: absolute;
+        top: 60px;
+        z-index: 3;
       }
 
       .ProductDetails-product {
