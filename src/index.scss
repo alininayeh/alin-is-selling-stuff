@@ -180,6 +180,11 @@ body {
         }
 
         .ProductDetails-productInfo {
+          a {
+            color: #424242;
+            font-weight: bold;
+          }
+          
           .ProductDetails-title {
             font-size: 25px;
             font-weight: normal;
