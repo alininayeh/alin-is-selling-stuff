@@ -156,7 +156,10 @@ body {
       .ProductDetails-product {
         background: #fff;
         color: #424242;
+        overflow-wrap: break-word;
         position: relative;
+        width: 100%;
+        word-wrap: break-word;
 
         @media (min-width: 720px) {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
